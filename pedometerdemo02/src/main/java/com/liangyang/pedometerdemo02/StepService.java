@@ -1,11 +1,10 @@
-package com.liangyang.pedometerdemo01;
+package com.liangyang.pedometerdemo02;
 
 import android.app.Service;
 import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.IBinder;
-import android.widget.EditText;
 
 /**
  * 计步器的服务
@@ -52,6 +51,7 @@ public class StepService extends Service {
         //此方法用来注册，只有注册过才会生效
         //参数：SensorEventListener的实例，Sensor的实例，更新速率
         sensorManager.registerListener(stepDetector, sensor, SensorManager.SENSOR_DELAY_FASTEST);
+
     }
 
     @Override
@@ -67,4 +67,5 @@ public class StepService extends Service {
             sensorManager.unregisterListener(stepDetector);
         }
     }
+
 }

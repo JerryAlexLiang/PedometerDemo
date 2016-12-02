@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/sport"
-    android:gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context="com.liangyang.pedometerdemo01.MainActivity">
-
+    android:gravity="center_horizontal"
+    android:background="@mipmap/sport"
+    tools:context="com.liangyang.pedometerdemo02.MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -62,6 +61,5 @@
         android:layout_marginTop="70dp"
         android:text="提示：允许APP获取手机全部权限，后台进行"
         android:textColor="#ffffff"/>
-
 
 </LinearLayout>
