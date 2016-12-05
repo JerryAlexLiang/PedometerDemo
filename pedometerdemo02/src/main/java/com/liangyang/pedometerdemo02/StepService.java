@@ -51,7 +51,6 @@ public class StepService extends Service {
         //此方法用来注册，只有注册过才会生效
         //参数：SensorEventListener的实例，Sensor的实例，更新速率
         sensorManager.registerListener(stepDetector, sensor, SensorManager.SENSOR_DELAY_FASTEST);
-
     }
 
     @Override
@@ -67,5 +66,4 @@ public class StepService extends Service {
             sensorManager.unregisterListener(stepDetector);
         }
     }
-
 }

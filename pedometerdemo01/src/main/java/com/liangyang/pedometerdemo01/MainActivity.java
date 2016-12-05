@@ -72,27 +72,27 @@ public class MainActivity extends AppCompatActivity {
         handler.removeMessages(0);
     }
 
-    /**
-     * 连按两次退出应用
-     */
-    private long waitTime = 2000;
-    private long touchTime = 0;
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (event.getAction() == KeyEvent.ACTION_DOWN && KeyEvent.KEYCODE_BACK == keyCode) {
-            long currentTime = System.currentTimeMillis();
-            if ((currentTime - touchTime) > waitTime) {
-                Toast.makeText(MainActivity.this, "再按一次退出应用", Toast.LENGTH_SHORT).show();
-                touchTime = currentTime;
-            } else {
-                finish();
-                System.exit(0);
-            }
-            return true;
-        } else if (KeyEvent.KEYCODE_HOME == keyCode) {
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
+//    /**
+//     * 连按两次退出应用
+//     */
+//    private long waitTime = 2000;
+//    private long touchTime = 0;
+//
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        if (event.getAction() == KeyEvent.ACTION_DOWN && KeyEvent.KEYCODE_BACK == keyCode) {
+//            long currentTime = System.currentTimeMillis();
+//            if ((currentTime - touchTime) > waitTime) {
+//                Toast.makeText(MainActivity.this, "再按一次退出应用", Toast.LENGTH_SHORT).show();
+//                touchTime = currentTime;
+//            } else {
+//                finish();
+//                System.exit(0);
+//            }
+//            return true;
+//        } else if (KeyEvent.KEYCODE_HOME == keyCode) {
+//            return true;
+//        }
+//        return super.onKeyDown(keyCode, event);
+//    }
 }
